@@ -11,7 +11,7 @@ void settings() {
 
 //setup other settings and initialize global objects
 void setup() {
-    frameRate(1000);
+    frameRate(120);
   //global objects
   time = new Time();
   gamestateManager = new GamestateManager();
@@ -32,15 +32,15 @@ void draw() {
   
   //used to modify game speed with UI
   //set timespeed to normal speed
-  time.gameSpeed = 1;
+  time.gameSpeed = 3;
   //if timeslow is active slow own the gamespeed
   if (this.timeslow) {
-    time.gameSpeed = 0.25;
+    time.gameSpeed = 1;
   }
   this.timeslow = false;
   //if time speed up is active speed up gamespeed
   if (this.timespeed) {
-    time.gameSpeed = 2;
+    time.gameSpeed = 5;
   }
   this.timespeed = false;
 }
